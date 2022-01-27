@@ -125,6 +125,25 @@ Add Listings -->
                   </div>
 
                   <div class="mb-3 col-lg-6">
+                    <label class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" placeholder="contact number" id="contact_number" name="contact_number">
+                  </div>
+
+                  <div class="mb-3 col-lg-4">
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" placeholder="Email" id="email" name="email">
+                  </div>
+
+                  <div class="mb-3 col-lg-4">
+                    <label class="form-label">Gender</label>
+                    <select class="form-control" id="gender" name="gender">
+                      <option value=""> -- Select gender -- </option>
+                      <option value="Male"> Male </option>
+                      <option value="Female"> Female </option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3 col-lg-4">
                     <label class="form-label">Date of Birth</label>
                     <input type="text" class="form-control" placeholder="Date of Birth" id="date_of_birth" name="date_of_birth">
                   </div>
@@ -222,13 +241,13 @@ Add Listings -->
               const pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude,
-              }; 
+              };
 
               infoWindow.setPosition(pos);
               infoWindow.setContent("Lat : " + position.coords.latitude + "---Lng: " + position.coords.longitude);
               infoWindow.open(map);
-              map.setCenter(pos); 
-             
+              map.setCenter(pos);
+
 
               $("#longitude").val("position.coords.longitude");
               $("#latitude").val(";;;");

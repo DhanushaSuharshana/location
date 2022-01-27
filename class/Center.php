@@ -6,12 +6,16 @@
  * @author Suharshana DsW
  * @web www.nysc.lk
  */
-class Center {
+class Center
+{
 
     public $id;
     public $full_name;
     public $nic;
     public $age;
+    public $email;
+    public $contact_number;
+    public $gender;
     public $date_of_birth;
     public $city;
     public $address;
@@ -19,7 +23,8 @@ class Center {
     public $longitude;
     public $latitude;
 
-    public function __construct($id) {
+    public function __construct($id)
+    {
 
         if ($id) {
 
@@ -32,6 +37,9 @@ class Center {
             $this->full_name = $result['full_name'];
             $this->nic = $result['nic'];
             $this->age = $result['age'];
+            $this->contact_number = $result['contact_number'];
+            $this->gender = $result['gender'];
+            $this->email = $result['email'];
             $this->date_of_birth = $result['date_of_birth'];
             $this->city = $result['city'];
             $this->address = $result['address'];
@@ -43,20 +51,24 @@ class Center {
         }
     }
 
-    public function create() {
+    public function create()
+    {
 
 
 
-        $query = "INSERT INTO `location` (`full_name`,`nic`,`age`,`date_of_birth`,`city`,`address`,`description`,`longitude`,`latitude`) VALUES  ('"
-                . $this->full_name . "','"
-                . $this->nic . "','"
-                . $this->age . "','"
-                . $this->date_of_birth . "','"
-                . $this->city . "','"
-                . $this->address . "','"
-                . $this->description . "','"
-                . $this->longitude . "','"
-                . $this->latitude . "')";
+        $query = "INSERT INTO `location` (`full_name`,`nic`,`age`,`contact_number`,`gender`,`email`,`date_of_birth`,`city`,`address`,`description`,`longitude`,`latitude`) VALUES  ('"
+            . $this->full_name . "','"
+            . $this->nic . "','"
+            . $this->age . "','"
+            . $this->contact_number . "','"
+            . $this->gender . "','"
+            . $this->email . "','"
+            . $this->date_of_birth . "','"
+            . $this->city . "','"
+            . $this->address . "','"
+            . $this->description . "','"
+            . $this->longitude . "','"
+            . $this->latitude . "')";
 
         $db = new Database();
 
@@ -71,7 +83,8 @@ class Center {
         }
     }
 
-    public function all() {
+    public function all()
+    {
         $query = "SELECT * FROM `location`";
         $db = new Database();
         $result = $db->readQuery($query);
@@ -83,18 +96,22 @@ class Center {
         return $array_res;
     }
 
-    public function update() {
-
+    public function update()
+    {
+        
         $query = "UPDATE  `location` SET "
-                . "`full_name` ='" . $this->full_name . "', "
-                . "`age` ='" . $this->age . "' "
-                . "`date_of_birth` ='" . $this->date_of_birth . "' "
-                . "`city` ='" . $this->city . "' "
-                . "`address` ='" . $this->address . "' "
-                . "`description` ='" . $this->description . "' "
-                . "`longitude` ='" . $this->longitude . "' "
-                . "`latitude` ='" . $this->latitude . "' "
-                . "WHERE `id` = '" . $this->id . "'";
+            . "`full_name` ='" . $this->full_name . "', "
+            . "`age` ='" . $this->age . "', "
+            . "`contact_number` ='" . $this->contact_number . "', "
+            . "`contact_number` ='" . $this->gender . "', "
+            . "`date_of_birth` ='" . $this->date_of_birth . "', "
+            . "`city` ='" . $this->city . "', "
+            . "`email` ='" . $this->email . "', "
+            . "`address` ='" . $this->address . "', "
+            . "`description` ='" . $this->description . "', "
+            . "`longitude` ='" . $this->longitude . "', "
+            . "`latitude` ='" . $this->latitude . "' "
+            . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
 
@@ -108,5 +125,4 @@ class Center {
             return FALSE;
         }
     }
-
 }
