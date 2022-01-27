@@ -1,337 +1,176 @@
-<?php 
+<?php
 include './class/include.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php 
-include "./class/include.php";
- 
-?>
-<head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Directro - Directory and Listing Template" />
-    <meta name="author" content="potenzaglobalsolutions.com" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Directory and Listing</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <?php
+    include "./class/include.php";
+    ?>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="HTML5 Template" />
+        <meta name="description" content="Directro - Directory and Listing Template" />
+        <meta name="author" content="potenzaglobalsolutions.com" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Directory and Listing</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico" />
 
-    <!-- Google Font -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap">
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap">
 
-    <!-- CSS Global Compulsory (Do not remove)-->
-    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
-    <link rel="stylesheet" href="css/flaticon/flaticon.css" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+        
+        <!-- DataTables -->
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
-    <link rel="stylesheet" href="css/select2/select2.css" />
-    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" />
-    <link rel="stylesheet" href="css/map/snazzy-info-window.min.css" />
+        <!-- Responsive datatable examples -->
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
+        
+        <!-- CSS Global Compulsory (Do not remove)-->
+        <link rel="stylesheet" href="css/font-awesome/all.min.css" />
+        <link rel="stylesheet" href="css/flaticon/flaticon.css" />
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
 
-    <!-- Template Style -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link href="css/map-api.css" rel="stylesheet" type="text/css"/>
-</head>
+        <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+        <link rel="stylesheet" href="css/select2/select2.css" />
+        <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
+        <link rel="stylesheet" href="css/magnific-popup/magnific-popup.css" />
+        <link rel="stylesheet" href="css/map/snazzy-info-window.min.css" />
 
-<body>
-
-    <!--=================================
-header -->
-    <?php include'header.php'?>
-    <!--=================================
- header -->
+        <!-- Template Style -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="css/map-api.css" rel="stylesheet" type="text/css"/>
 
 
+    </head>
 
-    <!--=================================
-listing map-->
-    <section class="bg-white half-map">
-        <div class="container-fluid">
-            <div class="row ">
-                <div class="col-xl-6 col-lg-5">
-                    <div class="half-map-full">
-                          <div id="GoogleMaps"></div>
+    <body>
+
+        <!--=================================
+    header -->
+        <?php include'header.php' ?>
+        <!--=================================
+     header -->
+
+
+
+        <!--=================================
+    listing map-->
+        <section class="bg-white half-map">
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-xl-6 col-lg-5">
+                        <div class="half-map-full">
+                            <div id="GoogleMaps"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-xl-6 col-lg-7">
-                    <div class="scrollbar scroll_dark h-100vh">
-                        <form class="home-search-02 bg-white">
-                            <div class="row g-0">
-                                <div class="col-lg-9 mt-4 mt-lg-0">
-                                    <div class="form-group mb-0 form-location">
-                                        <input type="text" class="form-control" placeholder="What are you looking for...">
-                                        <a class="location-icon" href="#"> <i class="fas fa-search-location"></i> </a>
-                                    </div>
-                                </div>
-                               
-                                 
-                                <div class="col-lg-3 d-grid">
-                                    <a class="btn btn-secondary" href="#"> <i class="fas fa-search-location"></i> Search </a>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="listing-item listing-list mt-4">
-                            <div class="row g-0">
-                                <div class="col-xl-4 col-lg-5 col-md-5">
-                                    <div class="listing-image bg-overlay-half-bottom">
-                                        <img class="img-fluid" src="images/listing/grid/01.jpg" alt="">
-                                        <div class="listing-quick-box">
-                                            <a class="category" href="#"> <i class="flaticon-coffee-cup"></i> Cafe</a>
-                                            <a class="popup popup-single" href="images/listing/grid/01.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                                            <a class="like" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-lg-7 col-md-7">
-                                    <div class="listing-details h-100">
-                                        <div class="listing-details-inner">
-                                            <div class="listing-title">
-                                                <h6><a href="#">Espresso macchiato</a></h6>
-                                                <span class="listing-price">$$$</span>
-                                            </div>
-                                            <div class="listing-rating-call">
-                                                <a class="listing-rating" href="#"><span>4.2</span> 12 Rating</a>
-                                                <a class="listing-call" href="#"><i class="fas fa-phone-volume"></i> +666 658 447</a>
-                                            </div>
-                                            <div class="listing-info">
-                                                <img class="img-fluid" src="images/listing-brand/01.png" alt="">
-                                                <p class="mb-0">So how do we get clarity? Simply by asking ourselves lots of questions: What do I really want? What does success look like</p>
-                                            </div>
-                                        </div>
-                                        <div class="listing-bottom">
-                                            <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i> Piper Drive Zion</a>
-                                            <span class="listing-open">Open</span>
-                                        </div>
-                                    </div>
+                    <div class="col-xl-6 col-lg-7">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Full Name</th>
+                                                <th>NIC</th>
+                                                <th>Age</th>
+                                                <th>City</th>
+                                                <th>Gender</th>
+                                                <th>Address</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            <?php
+                                            $CENTRES_OBJ = new Center(NULL);
+                                            $CENTRES = $CENTRES_OBJ->all();
+                                            foreach ($CENTRES as $key => $center) {
+                                                $key++;
+                                                ?>
+                                                <tr>
+                                                    <td><?php echo $key; ?></td>
+                                                    <td><?php echo $center['full_name']; ?></td>
+                                                    <td><?php echo $center['nic']; ?></td>
+                                                    <td><?php echo $center['age']; ?></td>
+                                                    <td><?php echo $center['city']; ?></td>
+                                                    <td><?php echo $center['gender']; ?></td>
+                                                    <td><?php echo $center['address']; ?></td>
+                                                    <td><?php echo $center['email']; ?></td>
+
+                                                </tr>
+                                                <?php
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                        </div>
-                        <div class="listing-item listing-list mt-4">
-                            <div class="row g-0">
-                                <div class="col-xl-4 col-lg-5 col-md-5">
-                                    <div class="listing-image bg-overlay-half-bottom">
-                                        <img class="img-fluid" src="images/listing/grid/02.jpg" alt="">
-                                        <div class="listing-quick-box">
-                                            <a class="category" href="#"> <i class="flaticon-megaphone"></i> Nightlife</a>
-                                            <a class="popup popup-single" href="images/listing/grid/02.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                                            <a class="like" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-lg-7 col-md-7">
-                                    <div class="listing-details h-100">
-                                        <div class="listing-details-inner">
-                                            <div class="listing-title">
-                                                <h6><a href="#">Fantastic Fridaze</a></h6>
-                                                <span class="listing-price">$$$</span>
-                                            </div>
-                                            <div class="listing-rating-call">
-                                                <a class="listing-rating" href="#"><span>4.6</span> 10 Rating</a>
-                                                <a class="listing-call" href="#"><i class="fas fa-phone-volume"></i> +444 656 326</a>
-                                            </div>
-                                            <div class="listing-info">
-                                                <img class="img-fluid" src="images/listing-brand/02.png" alt="">
-                                                <p class="mb-0">Introspection is the trick. Understand what you want, why you want it and what it will do for you. This is a critical factor.</p>
-                                            </div>
-                                        </div>
-                                        <div class="listing-bottom">
-                                            <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i> 472 Carpenter Rd</a>
-                                            <span class="listing-open">Open</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="listing-item listing-list mt-4">
-                            <div class="row g-0">
-                                <div class="col-xl-4 col-lg-5 col-md-5">
-                                    <div class="listing-image bg-overlay-half-bottom">
-                                        <img class="img-fluid" src="images/listing/grid/03.jpg" alt="">
-                                        <div class="listing-quick-box">
-                                            <a class="category" href="#"> <i class="flaticon-guitar"></i> Sound & music</a>
-                                            <a class="popup popup-single" href="images/listing/grid/03.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                                            <a class="like" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-lg-7 col-md-7">
-                                    <div class="listing-details h-100">
-                                        <div class="listing-details-inner">
-                                            <div class="listing-title">
-                                                <h6><a href="#">Bike Tours Hollywood</a></h6>
-                                                <span class="listing-price">$$$</span>
-                                            </div>
-                                            <div class="listing-rating-call">
-                                                <a class="listing-rating" href="#"><span>4.1</span> 06 Rating</a>
-                                                <a class="listing-call" href="#"><i class="fas fa-phone-volume"></i> +888 235 956</a>
-                                            </div>
-                                            <div class="listing-info">
-                                                <img class="img-fluid" src="images/listing-brand/03.png" alt="">
-                                                <p class="mb-0">Once you have a clear understanding of what you want, it is critical that you engage in goal setting – specifically setting.</p>
-                                            </div>
-                                        </div>
-                                        <div class="listing-bottom">
-                                            <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i> Lincolnton, NC 28092</a>
-                                            <span class="listing-close">Closed</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="listing-item listing-list mt-4">
-                            <div class="row g-0">
-                                <div class="col-xl-4 col-lg-5 col-md-5">
-                                    <div class="listing-image bg-overlay-half-bottom">
-                                        <img class="img-fluid" src="images/listing/grid/04.jpg" alt="">
-                                        <div class="listing-quick-box">
-                                            <a class="category" href="#"> <i class="flaticon-customer"></i> Art & Museums</a>
-                                            <a class="popup popup-single" href="images/listing/grid/04.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                                            <a class="like" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-lg-7 col-md-7">
-                                    <div class="listing-details h-100">
-                                        <div class="listing-details-inner">
-                                            <div class="listing-title">
-                                                <h6><a href="#">The Vatican Museums</a></h6>
-                                                <span class="listing-price">$$$</span>
-                                            </div>
-                                            <div class="listing-rating-call">
-                                                <a class="listing-rating" href="#"><span>4.9</span> 03 Rating</a>
-                                                <a class="listing-call" href="#"><i class="fas fa-phone-volume"></i> +222 356 457</a>
-                                            </div>
-                                            <div class="listing-info">
-                                                <img class="img-fluid" src="images/listing-brand/04.png" alt="">
-                                                <p class="mb-0">Focus is having the unwavering attention to complete what you set out to do. There are a million distractions in every facet.</p>
-                                            </div>
-                                        </div>
-                                        <div class="listing-bottom">
-                                            <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i> West Division Street</a>
-                                            <span class="listing-close">Closed</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="listing-item listing-list mt-4">
-                            <div class="row g-0">
-                                <div class="col-xl-4 col-lg-5 col-md-5">
-                                    <div class="listing-image bg-overlay-half-bottom">
-                                        <img class="img-fluid" src="images/listing/grid/05.jpg" alt="">
-                                        <div class="listing-quick-box">
-                                            <a class="category" href="#"> <i class="flaticon-wine"></i> Nightclub</a>
-                                            <a class="popup popup-single" href="images/listing/grid/05.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                                            <a class="like" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-lg-7 col-md-7">
-                                    <div class="listing-details h-100">
-                                        <div class="listing-details-inner">
-                                            <div class="listing-title">
-                                                <h6><a href="#">Liberty Club</a></h6>
-                                                <span class="listing-price">$$$</span>
-                                            </div>
-                                            <div class="listing-rating-call">
-                                                <a class="listing-rating" href="#"><span>4.6</span> 15 Rating</a>
-                                                <a class="listing-call" href="#"><i class="fas fa-phone-volume"></i> +333 659 856</a>
-                                            </div>
-                                            <div class="listing-info">
-                                                <img class="img-fluid" src="images/listing-brand/05.png" alt="">
-                                                <p class="mb-0">So, how can we stay on course with all the distractions in our lives? Willpower is a good start, but it’s very difficult.</p>
-                                            </div>
-                                        </div>
-                                        <div class="listing-bottom">
-                                            <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i> Fort Wayne, IN 46804</a>
-                                            <span class="listing-open">Open</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="listing-item listing-list mt-4 mb-4">
-                            <div class="row g-0">
-                                <div class="col-xl-4 col-lg-5 col-md-5">
-                                    <div class="listing-image bg-overlay-half-bottom">
-                                        <img class="img-fluid" src="images/listing/grid/06.jpg" alt="">
-                                        <div class="listing-quick-box">
-                                            <a class="category" href="#"> <i class="flaticon-food-serving"></i> Restaurant</a>
-                                            <a class="popup popup-single" href="images/listing/grid/06.jpg" data-bs-toggle="tooltip" data-bs-placement="top" title="Zoom"> <i class="fas fa-search-plus"></i> </a>
-                                            <a class="like" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Like"> <i class="far fa-heart"></i> </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-lg-7 col-md-7">
-                                    <div class="listing-details h-100">
-                                        <div class="listing-details-inner">
-                                            <div class="listing-title">
-                                                <h6><a href="#">Honey Restaurant</a></h6>
-                                                <span class="listing-price">$$$</span>
-                                            </div>
-                                            <div class="listing-rating-call">
-                                                <a class="listing-rating" href="#"><span>4.2</span> 08 Rating</a>
-                                                <a class="listing-call" href="#"><i class="fas fa-phone-volume"></i> +999 784 578</a>
-                                            </div>
-                                            <div class="listing-info">
-                                                <img class="img-fluid" src="images/listing-brand/06.png" alt="">
-                                                <p class="mb-0">The best way is to develop and follow a plan. Start with your goals in mind and then work backward to develop the plan.</p>
-                                            </div>
-                                        </div>
-                                        <div class="listing-bottom">
-                                            <a class="listing-loaction" href="#"> <i class="fas fa-map-marker-alt"></i> 442 Glenholme Street</a>
-                                            <span class="listing-open">Open</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div> <!-- end col -->
                     </div>
                 </div>
             </div>
+        </section>
+        <!--=================================
+    listing map-->
+
+        <!--=================================
+    Back To Top-->
+
+        <div id="back-to-top" class="back-to-top">
+            <a href="#"> <i class="fas fa-angle-up"></i></a>
         </div>
-    </section>
-    <!--=================================
-listing map-->
 
-    <!--=================================
-Back To Top-->
+        <!--=================================
+    Back To Top-->
 
-    <div id="back-to-top" class="back-to-top">
-        <a href="#"> <i class="fas fa-angle-up"></i></a>
-    </div>
+        <!--=================================
+    Javascript -->
 
-    <!--=================================
-Back To Top-->
+        <!-- JS Global Compulsory (Do not remove)-->
 
-    <!--=================================
-Javascript -->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/popper/popper.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
 
-    <!-- JS Global Compulsory (Do not remove)-->
-   
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+        <script src="js/select2/select2.full.js"></script>
+        <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+        <script src="js/map/handlebars.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;key=AIzaSyBPohe84NhPXKlVEVXxOsR9HQJkBpa6Z0o"></script>
+        <script src="js/map/snazzy-info-window.min.js"></script>
+ 
+        <script src="js/index-tooltip.js" type="text/javascript"></script>
+        <!-- Template Scripts (Do not remove)-->
+        <script src="js/custom.js"></script>
+        <script src="js/markers-on-map-1.4.0.js" type="text/javascript"></script>
+        <script src="js/map-api.js" type="text/javascript"></script>
 
-    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
-    <script src="js/select2/select2.full.js"></script>
-    <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
-    <script src="js/map/handlebars.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;key=AIzaSyBPohe84NhPXKlVEVXxOsR9HQJkBpa6Z0o"></script>
-    <script src="js/map/snazzy-info-window.min.js"></script>
-    <script src="js/map/map-script.js"></script>
-    <script src="js/index-tooltip.js" type="text/javascript"></script>
-    <!-- Template Scripts (Do not remove)-->
-    <script src="js/custom.js"></script>
-    <script src="js/markers-on-map-1.4.0.js" type="text/javascript"></script>
-    <script src="js/map-api.js" type="text/javascript"></script>
 
-</body>
+        <!-- Required datatable js -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <!-- Buttons examples -->
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
 
-<!-- Mirrored from themes.potenzaglobalsolutions.com/html/directro/index-05.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Dec 2021 04:35:31 GMT -->
+        <!-- Responsive examples -->
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+        <!-- Datatable init js -->
+        <script src="assets/datatables.init.js" type="text/javascript"></script>
+
+    </body>
 
 </html>
