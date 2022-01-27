@@ -3,7 +3,10 @@ include './class/include.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+include "./class/include.php";
+ 
+?>
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="HTML5 Template" />
