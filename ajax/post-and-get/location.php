@@ -11,6 +11,11 @@ $LOCATION->date_of_birth = $_POST['date_of_birth'];
 $LOCATION->city = $_POST['city'];
 $LOCATION->address = $_POST['address'];
 $LOCATION->description = $_POST['description'];
+$LOCATION->contact_number = $_POST['contact_number'];
+$LOCATION->gender = $_POST['gender'];
+$LOCATION->contact_number = $_POST['contact_number'];
+$LOCATION->email = $_POST['email'];
+
 //$LOCATION->longitude = $_POST['longitude'];
 //$LOCATION->latitude = $_POST['latitude'];
 
