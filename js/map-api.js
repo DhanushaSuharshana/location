@@ -19,7 +19,7 @@ $.ajax({
                     markerTitle: center.full_name,
 //                    markerUrl: 'https://youth.slysc.lk/public/img/map-marker.png',
                     markerSize: 40,
-                    markerContent: `<h4 style="text-align:center;margin:0 0 10px;">${center.full_name}</h4><p style="text-align:center; margin:0 0 10px;">${center.nic} <br>${center.age}</p><a href="mailto:${center.full_name}" style="display:table;margin:auto;padding:8px 12px;border-radius:20px;font-weight:700;background:#502974;color:#fff;cursor:pointer;">Send Mail</a>`,
+                    markerContent: `<h4 style="text-align:center;margin:0 0 10px;">${center.full_name}</h4><p style="text-align:center; margin:0 0 10px;">${center.nic} <br>${center.gender}</p><a href="mailto:${center.email}" style="display:table;margin:auto;padding:8px 12px;border-radius:20px;font-weight:700;background:#502974;color:#fff;cursor:pointer;">Send Mail</a>`,
                     // markerContentFromGoogleQuery: 'Ataturk Culture Center',
                     // markerCallback: function () {
                     //     // Notiflix.Notify.Success('This is a marker click callback. (Custom Content)');

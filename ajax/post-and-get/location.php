@@ -2,24 +2,24 @@
 
 include '../../class/include.php';
 
-$LOCATION = new Location(NULL);
+$CENTER = new Center(NULL);
 
-$LOCATION->full_name = $_POST['full_name'];
-$LOCATION->nic = $_POST['nic'];
-$LOCATION->age = $_POST['age'];
-$LOCATION->date_of_birth = $_POST['date_of_birth'];
-$LOCATION->city = $_POST['city'];
-$LOCATION->address = $_POST['address'];
-$LOCATION->description = $_POST['description'];
-$LOCATION->contact_number = $_POST['contact_number'];
-$LOCATION->gender = $_POST['gender'];
-$LOCATION->contact_number = $_POST['contact_number'];
-$LOCATION->email = $_POST['email'];
+$CENTER->full_name = $_POST['full_name'];
+$CENTER->nic = $_POST['nic'];
+$CENTER->age = $_POST['age'];
+$CENTER->date_of_birth = $_POST['date_of_birth'];
+$CENTER->city = $_POST['city'];
+$CENTER->address = $_POST['address'];
+$CENTER->description = $_POST['description'];
+$CENTER->contact_number = $_POST['contact_number'];
+$CENTER->gender = $_POST['gender'];
+$CENTER->email = $_POST['email'];
+ 
 
-//$LOCATION->longitude = $_POST['longitude'];
-//$LOCATION->latitude = $_POST['latitude'];
+$CENTER->longitude = $_POST['longitude'];
+$CENTER->latitude = $_POST['latitude'];
 
-$res = $LOCATION->create();
+$res = $CENTER->create();
 
 if ($res) {
     $response['status'] = 'success';
