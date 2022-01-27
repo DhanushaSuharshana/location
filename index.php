@@ -1,3 +1,6 @@
+<?php 
+include './class/include.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +30,7 @@
 
     <!-- Template Style -->
     <link rel="stylesheet" href="css/style.css" />
-
+    <link href="css/map-api.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -47,8 +50,7 @@ listing map-->
             <div class="row ">
                 <div class="col-xl-6 col-lg-5">
                     <div class="half-map-full">
-                        <div class="map-canvas h-100vh">
-                        </div>
+                          <div id="GoogleMaps"></div>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-7">
@@ -306,7 +308,8 @@ Back To Top-->
 Javascript -->
 
     <!-- JS Global Compulsory (Do not remove)-->
-    <script src="js/jquery-3.6.0.min.js"></script>
+   
+    <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/popper/popper.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
 
@@ -318,19 +321,11 @@ Javascript -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;key=AIzaSyBPohe84NhPXKlVEVXxOsR9HQJkBpa6Z0o"></script>
     <script src="js/map/snazzy-info-window.min.js"></script>
     <script src="js/map/map-script.js"></script>
-
+    <script src="js/index-tooltip.js" type="text/javascript"></script>
     <!-- Template Scripts (Do not remove)-->
     <script src="js/custom.js"></script>
-
-    <script id="marker-content-template" type="text/x-handlebars-template">
-        <div class="listing-item-map-img" style="background-image: url({{{bgImg}}})"></div>
-        <div class="listing-item-map">
-            <h6 class="listing-item-map-title">
-                <a href="{{link}}">{{title}}</a>
-            </h6>
-            <div class="listing-item-map-content">{{{body}}}</div>
-        </div>
-    </script>
+    <script src="js/markers-on-map-1.4.0.js" type="text/javascript"></script>
+    <script src="js/map-api.js" type="text/javascript"></script>
 
 </body>
 
