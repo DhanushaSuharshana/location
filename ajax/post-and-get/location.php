@@ -14,7 +14,12 @@ $CENTER->description = $_POST['description'];
 $CENTER->contact_number = $_POST['contact_number'];
 $CENTER->gender = $_POST['gender'];
 $CENTER->email = $_POST['email'];
- 
+$CENTER->religion = $_POST['religion'];
+$CENTER->nationality = $_POST['nationality'];
+$CENTER->is_agent = $_POST['is_agent'];
+$CENTER->whatsapp_no_1 = $_POST['whatsapp_no_1'];
+$CENTER->whatsapp_no_2 = $_POST['whatsapp_no_2'];
+
 
 $CENTER->longitude = $_POST['longitude'];
 $CENTER->latitude = $_POST['latitude'];

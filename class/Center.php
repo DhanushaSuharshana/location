@@ -19,6 +19,11 @@ class Center
     public $date_of_birth;
     public $city;
     public $address;
+    public $religion;
+    public $nationality;
+    public $is_agent;
+    public $whatsapp_no_1;
+    public $whatsapp_no_2;
     public $description;
     public $longitude;
     public $latitude;
@@ -28,7 +33,7 @@ class Center
 
         if ($id) {
 
-            $query = "SELECT * FROM `location` WHERE `id`=" . $id;
+            $query = "SELECT * FROM `centers` WHERE `id`=" . $id;
 
             $db = new Database();
             $result = mysqli_fetch_array($db->readQuery($query));
@@ -36,6 +41,11 @@ class Center
             $this->id = $result['id'];
             $this->full_name = $result['full_name'];
             $this->nic = $result['nic'];
+            $this->nationality = $result['nationality'];
+            $this->religion = $result['religion'];
+            $this->is_agent = $result['is_agent'];
+            $this->whatsapp_no_1 = $result['whatsapp_no_1'];
+            $this->whatsapp_no_2 = $result['whatsapp_no_'];
             $this->age = $result['age'];
             $this->contact_number = $result['contact_number'];
             $this->gender = $result['gender'];
@@ -56,11 +66,16 @@ class Center
 
 
 
-        $query = "INSERT INTO `location` (`full_name`,`nic`,`age`,`contact_number`,`gender`,`email`,`date_of_birth`,`city`,`address`,`description`,`longitude`,`latitude`) VALUES  ('"
+        $query = "INSERT INTO `centers` (`full_name`,`nic`,`age`,`contact_number`,`religion`,`nationality`,`is_agent`,`whatsapp_no_1`,`whatsapp_no_2`,`gender`,`email`,`date_of_birth`,`city`,`address`,`description`,`longitude`,`latitude`) VALUES  ('"
             . $this->full_name . "','"
             . $this->nic . "','"
             . $this->age . "','"
             . $this->contact_number . "','"
+            . $this->religion . "','"
+            . $this->nationality . "','"
+            . $this->is_agent . "','"
+            . $this->whatsapp_no_1 . "','"
+            . $this->whatsapp_no_2 . "','"
             . $this->gender . "','"
             . $this->email . "','"
             . $this->date_of_birth . "','"
@@ -69,6 +84,7 @@ class Center
             . $this->description . "','"
             . $this->longitude . "','"
             . $this->latitude . "')";
+ 
 
         $db = new Database();
 
@@ -85,7 +101,7 @@ class Center
 
     public function all()
     {
-        $query = "SELECT * FROM `location`";
+        $query = "SELECT * FROM `centers`";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -98,8 +114,8 @@ class Center
 
     public function update()
     {
-        
-        $query = "UPDATE  `location` SET "
+
+        $query = "UPDATE  `centers` SET "
             . "`full_name` ='" . $this->full_name . "', "
             . "`age` ='" . $this->age . "', "
             . "`contact_number` ='" . $this->contact_number . "', "

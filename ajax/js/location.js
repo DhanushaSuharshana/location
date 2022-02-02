@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 
     $("#create").click(function(event) {
         event.preventDefault();
-        
+
         if (!$('#full_name').val() || $('#full_name').val().length === 0) {
             swal({
                 title: "Error!",
@@ -38,6 +38,32 @@ jQuery(document).ready(function() {
                 timer: 2000,
                 showConfirmButton: false
             });
+            religion
+        } else if (!$('#whatsapp_no_1').val() || $('#whatsapp_no_1').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter whatsapp number..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#religion').val() || $('#religion').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter religion..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+        } else if (!$('#nationality').val() || $('#nationality').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter nationality..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+
         } else if (!$('#city').val() || $('#city').val().length === 0) {
             swal({
                 title: "Error!",
@@ -111,6 +137,6 @@ jQuery(document).ready(function() {
         return false;
     });
 
-  
+
 
 });
