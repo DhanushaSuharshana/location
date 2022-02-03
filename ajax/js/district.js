@@ -14,7 +14,7 @@ $(document).ready(function () {
             success: function (jsonStr) {
                 var html = '<option value="">---- Select the Divisional Secretariat --- </option>';
                 $.each(jsonStr, function (i, data) {
-                    html += '<option value="' + data.name + '">';
+                    html += '<option value="' + data.id + '">';
                     html += data.name;
                     html += '</option>';
                 });
