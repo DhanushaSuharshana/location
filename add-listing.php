@@ -159,7 +159,7 @@ $DEFAULTDATA = new DefaultData(null);
 
                                     <div class="mb-3 col-lg-4">
                                         <label class="form-label">Date of Birth</label>
-                                        <input type="text" class="form-control" placeholder="Date of Birth" id="date_of_birth" name="date_of_birth">
+                                        <input type="text" class="form-control date-inputmask" placeholder="Date of Birth" id="date_of_birth" name="date_of_birth">
                                     </div>
 
                                     <div class="mb-3 col-lg-4">
@@ -241,7 +241,6 @@ $DEFAULTDATA = new DefaultData(null);
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
 
-    <script src="sweetalert/sweetalert-dev.js"></script>
     <script src="ajax/js/location.js"></script>
 
 
@@ -250,8 +249,30 @@ $DEFAULTDATA = new DefaultData(null);
 
     <!-- Template Scripts (Do not remove)-->
     <script src="js/custom.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
 
+    <script>
+        $(function(e) {
+            "use strict";
+            $(".date-inputmask").inputmask("dd/mm/yyyy"),
 
+                $(".phone-inputmask").inputmask("9999999999"),
+                $(".email-inputmask").inputmask({
+                    mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[*{2,6}][*{1,2}].*{1,}[.*{2,6}][.*{1,2}]",
+                    greedy: !1,
+                    onBeforePaste: function(n, a) {
+                        return (e = e.toLowerCase()).replace("mailto:", "")
+                    },
+                    definitions: {
+                        "*": {
+                            validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~/-]",
+                            cardinality: 1,
+                            casing: "lower"
+                        }
+                    }
+                })
+        });
+    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFzGKfzDOLBpIU1ElAxVrBr-Ed2QRwzgQ&callback=initMap&v=weekly" async></script>
