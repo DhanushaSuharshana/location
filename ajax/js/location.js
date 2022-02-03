@@ -64,10 +64,10 @@ jQuery(document).ready(function() {
                 showConfirmButton: false
             });
 
-        } else if (!$('#city').val() || $('#city').val().length === 0) {
+        } else if (!$('#ds').val() || $('#ds').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please enter city..!",
+                text: "Please enter District Secretariat..!",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -88,13 +88,9 @@ jQuery(document).ready(function() {
                 timer: 2000,
                 showConfirmButton: false
             });
-
         } else {
-
-
             //grab all form data  
             var formData = new FormData($("form#form-data")[0]);
-
             $.ajax({
                 url: "ajax/post-and-get/location.php",
                 type: 'POST',
