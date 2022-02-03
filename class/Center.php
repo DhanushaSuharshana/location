@@ -17,7 +17,7 @@ class Center
     public $contact_number;
     public $gender;
     public $date_of_birth;
-    public $city;
+    public $district_secretariat;
     public $address;
     public $religion;
     public $nationality;
@@ -51,7 +51,7 @@ class Center
             $this->gender = $result['gender'];
             $this->email = $result['email'];
             $this->date_of_birth = $result['date_of_birth'];
-            $this->city = $result['city'];
+            $this->district_secretariat = $result['district_secretariat'];
             $this->address = $result['address'];
             $this->description = $result['description'];
             $this->longitude = $result['longitude'];
@@ -66,7 +66,7 @@ class Center
 
 
 
-        $query = "INSERT INTO `centers` (`full_name`,`nic`,`age`,`contact_number`,`religion`,`nationality`,`is_agent`,`whatsapp_no_1`,`whatsapp_no_2`,`gender`,`email`,`date_of_birth`,`city`,`address`,`description`,`longitude`,`latitude`) VALUES  ('"
+        $query = "INSERT INTO `centers` (`full_name`,`nic`,`age`,`contact_number`,`religion`,`nationality`,`is_agent`,`whatsapp_no_1`,`whatsapp_no_2`,`gender`,`email`,`date_of_birth`,`district_secretariat`,`address`,`description`,`longitude`,`latitude`) VALUES  ('"
             . $this->full_name . "','"
             . $this->nic . "','"
             . $this->age . "','"
@@ -79,7 +79,7 @@ class Center
             . $this->gender . "','"
             . $this->email . "','"
             . $this->date_of_birth . "','"
-            . $this->city . "','"
+            . $this->district_secretariat . "','"
             . $this->address . "','"
             . $this->description . "','"
             . $this->longitude . "','"
@@ -121,7 +121,7 @@ class Center
             . "`contact_number` ='" . $this->contact_number . "', "
             . "`contact_number` ='" . $this->gender . "', "
             . "`date_of_birth` ='" . $this->date_of_birth . "', "
-            . "`city` ='" . $this->city . "', "
+            . "`district_secretariat` ='" . $this->district_secretariat . "', "
             . "`email` ='" . $this->email . "', "
             . "`address` ='" . $this->address . "', "
             . "`description` ='" . $this->description . "', "
