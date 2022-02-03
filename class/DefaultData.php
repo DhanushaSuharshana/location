@@ -37,14 +37,5 @@ class DefaultData
         );
     }
 
-    //select vehicle Budget    
-    public function getVehicleBudget()
-    {
-        return array(
-            "1" => "Economy",
-            "2" => "Compact(mid sized car)",
-            "3" => "Premium(High luxurious):",
-            "4" => "Luxurious"
-        );
-    }
+     
 }
